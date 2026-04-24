@@ -3,6 +3,8 @@ export const metadata = {
   description: 'Interactive BESS industry insight infographic for EPC and SAP transformation.',
 };
 
+import './globals.css';
+
 export default function RootLayout({ children }) {
   return (
     <html lang="zh-CN">

@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build:data": "node scripts/build-infographic.mjs",
+    "validate:data": "node scripts/build-infographic.mjs",
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run build:data && next build",
     "start": "next start"
   },
   "dependencies": {
+    "chart.js": "^4.5.1",
     "next": "^16.2.4",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
