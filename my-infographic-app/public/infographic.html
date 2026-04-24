@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024-2027 大型电池储能系统 (BESS) 行业深度洞察与数字化转型图谱</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- 
+Palette: Firm Research (Firm Blue #00338D, Cobalt Blue #1E49E2, Pink #FD349C, Purple #7213EA, Light Blue #ACEAFF, Pacific Blue #00B8F5).
+Narrative Plan: 1. Hero/Intro -> 2. Geographical Growth (Bar) -> 3. Tech/Duration Trends (Donut) -> 4. Top Players Landscape (Horizontal Bar) -> 5. Business Challenges & Digital Solutions (Radar & HTML Flow).
+Vis Choices: Bar (Geo growth comparison), Donut (Market composition by duration), Horiz-Bar (Player rankings), Radar (Digital maturity vs business challenges).
+Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in the output.
+-->
+<style>
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    max-height: 400px;
+}
+body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+.material-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+.material-card:hover {
+    transform: translateY(-2px);
+}
+.stat-value {
+    background: linear-gradient(to right, #FD349C, #00338D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.step-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+/* AI Chat Widget Styles */
+#chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+#chat-window {
+    width: 350px;
+    height: 500px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+.chat-message { margin-bottom: 0.75rem; padding: 0.75rem; border-radius: 0.5rem; max-width: 85%; font-size: 0.875rem; }
+.chat-message.user { background-color: #E2E8F0; color: #1E293B; align-self: flex-end; border-bottom-right-radius: 0; }
+.chat-message.ai { background-color: #FD349C; color: #ffffff; align-self: flex-start; border-bottom-left-radius: 0; }
+.loading-dot { display: inline-block; width: 6px; height: 6px; background-color: currentColor; border-radius: 50%; margin: 0 2px; animation: bounce 1.4s infinite ease-in-out both; }
+.loading-dot:nth-child(1) { animation-delay: -0.32s; }
+.loading-dot:nth-child(2) { animation-delay: -0.16s; }
+@keyframes bounce { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+</style>
+</head>
+<body class="antialiased">
+
+<nav class="sticky top-0 z-50 bg-[#00338D] text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl">🔋</span>
+                <span class="font-bold text-lg tracking-wide">BESS 行业洞察报告 (2024-2027)</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#overview" class="hover:text-[#FD349C] transition-colors">市场概览</a>
+                <a href="#trends" class="hover:text-[#FD349C] transition-colors">技术趋势</a>
+                <a href="#players" class="hover:text-[#FD349C] transition-colors">头部玩家</a>
+                <a href="#digital" class="hover:text-[#FD349C] transition-colors">数字化转型</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<header class="bg-gradient-to-br from-[#00338D] to-[#FD349C] py-20 px-4 sm:px-6 lg:px-8 text-white text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-6">大型电池储能系统 (BESS) 发展全景图</h1>
+    <p class="max-w-3xl mx-auto text-lg md:text-xl text-blue-100 leading-relaxed">
+        聚焦大中华区、北美、欧洲及东南亚市场，剖析 EPC 模式下大型储能项目的近中期发展动能。深入探讨供应链、财务、ESG 合规挑战，并揭示企业级 IT (ERP/PLM/SCM) 的破局之道。
+    </p>
+</header>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <!-- AI Summary Section -->
+    <section id="ai-summary" class="mb-16">
+        <div class="material-card bg-gradient-to-r from-slate-50 to-blue-50 border border-blue-100">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-[#00338D] flex items-center gap-2">
+                        <span>🤖</span> 智能洞察生成器
+                    </h2>
+                    <p class="text-sm text-gray-600 mt-1">基于当前报告数据，使用 AI 为不同决策者生成定制化的高管摘要。</p>
+                </div>
+                <div class="flex w-full md:w-auto gap-2">
+                    <select id="role-select" class="flex-1 md:w-48 px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FD349C] text-sm text-gray-700">
+                        <option value="CEO">企业 CEO (侧重全局与战略)</option>
+                        <option value="CFO">财务总监 (侧重成本与回报)</option>
+                        <option value="SCM">供应链总监 (侧重物流与合规)</option>
+                    </select>
+                    <button id="generate-summary-btn" class="bg-[#00338D] hover:bg-[#FD349C] text-white px-5 py-2 rounded-md font-medium transition-colors whitespace-nowrap shadow-sm">
+                        ✨ 生成摘要
+                    </button>
+                </div>
+            </div>
+            <div id="summary-content" class="hidden mt-4 p-5 bg-white rounded-md text-gray-700 text-sm leading-relaxed border border-gray-200 shadow-inner">
+                <!-- Summary will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="mb-16">
+        <div class="mb-8 border-l-4 border-[#ACEAFF] pl-4">
+            <h2 class="text-3xl font-bold text-[#00338D]">全球核心区域装机容量飙升</h2>
+            <p class="text-gray-600 mt-2">在各国净零排放目标驱动下，大型 BESS 部署呈指数级增长。大中华区与美国继续领跑，欧洲加速部署以应对能源安全，东南亚 (SEA) 展现出巨大的中长期爆发潜力。</p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="material-card flex flex-col justify-center">
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">核心指标看板</h3>
+                    <p class="text-sm text-gray-500">2024 至 2027 预期复合年增长率 (CAGR) 及关键预测。</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 text-center">
+                        <div class="text-4xl">🌍</div>
+                        <div class="text-3xl font-black stat-value mt-2">42%</div>
+                        <div class="text-sm font-medium text-gray-600 mt-1">全球平均 CAGR</div>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 text-center">
+                        <div class="text-4xl">⚡</div>
+                        <div class="text-3xl font-black stat-value mt-2">185 GW</div>
+                        <div class="text-sm font-medium text-gray-600 mt-1">2027 新增装机预测</div>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 text-center">
+                        <div class="text-4xl">🏭</div>
+                        <div class="text-3xl font-black stat-value mt-2">>80%</div>
+                        <div class="text-sm font-medium text-gray-600 mt-1">EPC 模式占比</div>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 text-center">
+                        <div class="text-4xl">📈</div>
+                        <div class="text-3xl font-black stat-value mt-2">15%</div>
+                        <div class="text-sm font-medium text-gray-600 mt-1">东南亚预期增速反超</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="material-card">
+                <h3 class="text-xl font-semibold text-center mb-4">区域市场装机容量预测 (GW)</h3>
+                <div class="chart-container">
+                    <canvas id="geoChart"></canvas>
+                </div>
+                <p class="text-xs text-center text-gray-400 mt-4">数据维度：比较近端 (2024) 与中端 (2027) 各区域大型储能项目预期。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="trends" class="mb-16">
+        <div class="mb-8 border-l-4 border-[#7213EA] pl-4">
+            <h2 class="text-3xl font-bold text-[#00338D]">技术与产品演进：长时储能的崛起</h2>
+            <p class="text-gray-600 mt-2">随着可再生能源渗透率加深，电网对调峰调频及容量支撑的要求提高。在 EPC 招标中，4小时及以上系统的需求份额正在急剧扩张，对电芯一致性与热管理系统 (TMS) 提出了极高挑战。</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div class="material-card">
+                <h3 class="text-xl font-semibold text-center mb-4">2025年预计新增项目储能时长分布</h3>
+                <div class="chart-container h-[300px]">
+                    <canvas id="durationChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-[#FD349C]/10 border-l-4 border-[#FD349C] p-4 rounded-r-lg">
+                    <h4 class="font-bold text-[#00338D] text-lg">1小时以内 (高功率调频)</h4>
+                    <p class="text-sm text-gray-700 mt-1">需求逐步饱和，主要集中在特定电网辅助服务市场，竞争白热化，利润空间收窄。</p>
+                </div>
+                <div class="bg-[#7213EA]/10 border-l-4 border-[#7213EA] p-4 rounded-r-lg">
+                    <h4 class="font-bold text-[#00338D] text-lg">2-4小时 (能量移位主流)</h4>
+                    <p class="text-sm text-gray-700 mt-1">目前存量最大的区间。太阳能削峰填谷的标准配置，系统集成商 (SI) 的主要营收来源。</p>
+                </div>
+                <div class="bg-[#ACEAFF]/10 border-l-4 border-[#ACEAFF] p-4 rounded-r-lg">
+                    <h4 class="font-bold text-[#00338D] text-lg">4小时以上 (长时储能趋势)</h4>
+                    <p class="text-sm text-gray-700 mt-1">近期及中期增速最快的领域。政策补贴与电网稳定性刚需共同驱动，对 PLM 与全生命周期运维提出更高要求。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="players" class="mb-16">
+        <div class="mb-8 border-l-4 border-[#00B8F5] pl-4">
+            <h2 class="text-3xl font-bold text-[#00338D]">全球头部玩家动能与竞争格局</h2>
+            <p class="text-gray-600 mt-2">电池制造商（如宁德时代、比亚迪）与独立系统集成商（如 Fluence、Wärtsilä）在大型 EPC 项目中既合作又竞争。垂直整合能力、全球化交付履约能力成为当前核心护城河。</p>
+        </div>
+
+        <div class="material-card">
+            <h3 class="text-xl font-semibold text-center mb-6">头部企业全球大型 BESS 交付动能估算 (GWh)</h3>
+            <div class="chart-container h-[400px]">
+                <canvas id="playersChart"></canvas>
+            </div>
+            <div class="mt-6 flex flex-wrap justify-center gap-4 text-sm">
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full font-medium">垂直一体化厂商持续扩大领先优势</span>
+                <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full font-medium">纯集成商需通过软件(EMS)突围</span>
+                <span class="px-3 py-1 bg-orange-50 text-orange-700 rounded-full font-medium">中资企业出海加速占据欧美市场份额</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="digital" class="mb-16">
+        <div class="mb-8 border-l-4 border-[#00338D] pl-4">
+            <h2 class="text-3xl font-bold text-[#00338D]">业务挑战与核心 IT 数字化解局</h2>
+            <p class="text-gray-600 mt-2">大型 EPC 项目面临复杂的供应链波动、严苛的本地化合规 (ESG/EHS) 以及庞大的资金运作压力。企业必须通过构建 ERP、PLM 与 SCM 协同的数字底座来抵御风险。</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            <div class="material-card flex flex-col justify-center">
+                <h3 class="text-xl font-semibold text-center mb-4">企业能力雷达：传统模式 vs 数字化核心</h3>
+                <div class="chart-container h-[350px]">
+                    <canvas id="radarChart"></canvas>
+                </div>
+                <p class="text-xs text-gray-500 text-center mt-4">全面实施企业级 IT 架构 (ERP+SCM+PLM) 显著提升各项业务韧性。</p>
+            </div>
+
+            <div class="material-card flex flex-col justify-center">
+                <h3 class="text-xl font-semibold mb-6">数字化转型关键链路</h3>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="step-circle bg-[#ACEAFF] shadow-lg shrink-0">1</div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-800">供应链与采购 (SCM & ERP)</h4>
+                            <p class="text-sm text-gray-600 mt-1"><strong>挑战：</strong> 跨地域物流延迟、原材料价格剧烈波动。<br/><strong>数字化解法：</strong> 依托 SCM 实现全球寻源透明化，ERP 业财一体化确保项目物料主数据与实时库存精准对接，降低资金占用。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="step-circle bg-[#7213EA] shadow-lg shrink-0">2</div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-800">合规、ESG与财务运营 (ERP & PMO)</h4>
+                            <p class="text-sm text-gray-600 mt-1"><strong>挑战：</strong> 欧美市场碳足迹溯源、电池护照合规及复杂的项目融资(Project Finance)。<br/><strong>数字化解法：</strong> 企业级 PMO 协同 ERP，实现 WBS（工作分解结构）维度的精细化成本管控，自动化生成符合不同地域标准的 ESG 审计报告。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="step-circle bg-[#00B8F5] shadow-lg shrink-0">3</div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-800">研发与全生命周期 (PLM)</h4>
+                            <p class="text-sm text-gray-600 mt-1"><strong>挑战：</strong> 项目非标定制多，BOM（物料清单）版本混乱，运维成本高。<br/><strong>数字化解法：</strong> 部署统一的 PLM 系统，打通研发 eBOM 到制造/项目 mBOM，建立数字孪生，实现项目交付后的预测性维护。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="bg-[#00338D] text-blue-200 py-8 text-center text-sm">
+    <div class="max-w-7xl mx-auto px-4">
+        <p class="font-bold text-white mb-2">BESS Industry Analytical Report & Digital Strategy Infographic</p>
+        <p>数据为基于市场趋势的推演预测。聚焦 EPC、ERP、供应链运营管理。2024 内部参考。</p>
+    </div>
+</footer>
+
+<!-- AI Chat Widget -->
+<div id="chat-widget">
+    <div id="chat-window" class="bg-white flex-col">
+        <div class="bg-[#00338D] text-white p-4 flex justify-between items-center rounded-t-xl">
+            <div class="font-bold flex items-center gap-2"><span>💬</span> BESS 行业智能顾问</div>
+            <button id="close-chat" class="text-white hover:text-gray-300 focus:outline-none text-lg">✖</button>
+        </div>
+        <div id="chat-messages" class="flex-1 p-4 overflow-y-auto flex flex-col bg-slate-50 border-x border-gray-200">
+            <div class="chat-message ai shadow-sm">
+                您好！我是基于 Gemini API 驱动的 BESS 行业顾问。关于大型储能项目、供应链运营或企业数字化转型，您有什么想深入探讨的吗？
+            </div>
+        </div>
+        <div class="p-3 border border-gray-200 bg-white flex gap-2 rounded-b-xl">
+            <input type="text" id="chat-input" class="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FD349C] text-sm" placeholder="输入您的问题...">
+            <button id="send-chat-btn" class="bg-[#ACEAFF] hover:bg-[#d63d60] text-white px-4 py-2 rounded-md font-medium transition-colors shadow-sm">
+                ✨ 发送
+            </button>
+        </div>
+    </div>
+    <button id="open-chat-btn" class="mt-4 float-right bg-[#ACEAFF] text-white w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-2xl hover:scale-105 transition-transform focus:outline-none">
+        💬
+    </button>
+</div>
+
+<script>
+    Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "Inter", "Inter", "Helvetica Neue", Arial, sans-serif';
+    Chart.defaults.color = '#475569';
+
+    const tooltipConfig = {
+        plugins: {
+            tooltip: {
+                backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                titleFont: { size: 14, weight: 'bold' },
+                bodyFont: { size: 13 },
+                padding: 12,
+                cornerRadius: 8,
+                callbacks: {
+                    title: function(tooltipItems) {
+                        const item = tooltipItems[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        if (Array.isArray(label)) {
+                            return label.join(' ');
+                        } else {
+                            return label;
+                        }
+                    }
+                }
+            }
+        }
+    };
+
+    const ctxGeo = document.getElementById('geoChart').getContext('2d');
+    new Chart(ctxGeo, {
+        type: 'bar',
+        data: {
+            labels: ['大中华区 (Greater China)', '美国 (US)', '欧洲 (EU)', '东南亚 (SEA)'],
+            datasets: [
+                {
+                    label: '2024 预估装机 (GW)',
+                    data: [45, 38, 25, 4],
+                    backgroundColor: '#FD349C',
+                    borderRadius: 4
+                },
+                {
+                    label: '2027 预期装机 (GW)',
+                    data: [85, 70, 52, 16],
+                    backgroundColor: '#00338D',
+                    borderRadius: 4
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { ...tooltipConfig.plugins },
+            scales: {
+                y: { beginAtZero: true, grid: { color: '#f1f5f9' } },
+                x: { grid: { display: false } }
+            }
+        }
+    });
+
+    const ctxDuration = document.getElementById('durationChart').getContext('2d');
+    new Chart(ctxDuration, {
+        type: 'doughnut',
+        data: {
+            labels: ['1小时以内 (高频调峰)', '2-4小时 (主流能量移位)', '4小时以上 (长时储能崛起)'],
+            datasets: [{
+                data: [15, 50, 35],
+                backgroundColor: ['#FD349C', '#7213EA', '#ACEAFF'],
+                borderWidth: 0,
+                hoverOffset: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '65%',
+            plugins: {
+                ...tooltipConfig.plugins,
+                legend: { position: 'bottom' }
+            }
+        }
+    });
+
+    const ctxPlayers = document.getElementById('playersChart').getContext('2d');
+    new Chart(ctxPlayers, {
+        type: 'bar',
+        data: {
+            labels: ['宁德时代 (CATL)', '阳光电源 (Sungrow)', '特斯拉 (Tesla)', '弗迪电池 (BYD)', 'Fluence', 'Wärtsilä'],
+            datasets: [{
+                label: '全球市场动能/预估出货 (GWh)',
+                data: [42, 16, 15, 14, 11, 8],
+                backgroundColor: ['#ACEAFF', '#7213EA', '#FD349C', '#00B8F5', '#00338D', '#1E49E2'],
+                borderRadius: 4
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { ...tooltipConfig.plugins, legend: { display: false } },
+            scales: {
+                x: { beginAtZero: true, grid: { color: '#f1f5f9' } },
+                y: { grid: { display: false } }
+            }
+        }
+    });
+
+    const ctxRadar = document.getElementById('radarChart').getContext('2d');
+    new Chart(ctxRadar, {
+        type: 'radar',
+        data: {
+            labels: [
+                ['大中型EPC项目', '供应链运营管理'], 
+                ['多国ESG与EHS', '监管合规性审查'], 
+                ['项目级财务运营', '全生命周期成本'], 
+                ['全球研发协同', '与PLM管理'], 
+                ['企业级PMO与', '跨部门执行力']
+            ],
+            datasets: [
+                {
+                    label: '依托数字化底座 (ERP+SCM+PLM)',
+                    data: [90, 85, 95, 80, 88],
+                    backgroundColor: 'rgba(0, 180, 216, 0.2)',
+                    borderColor: '#FD349C',
+                    pointBackgroundColor: '#00338D',
+                    borderWidth: 2
+                },
+                {
+                    label: '传统孤岛式管理模式',
+                    data: [40, 50, 45, 30, 55],
+                    backgroundColor: 'rgba(239, 71, 111, 0.2)',
+                    borderColor: '#ACEAFF',
+                    pointBackgroundColor: '#00338D',
+                    borderWidth: 2
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { ...tooltipConfig.plugins },
+            scales: {
+                r: {
+                    angleLines: { color: '#e2e8f0' },
+                    grid: { color: '#e2e8f0' },
+                    pointLabels: { font: { size: 11, weight: '500' }, color: '#334155' },
+                    ticks: { display: false, min: 0, max: 100 }
+                }
+            }
+        }
+    });
+
+    // --- Gemini API Integration Logic ---
+    // The API key stays private in Vercel as GEMINI_API_KEY.
+    // Browser code only calls this app's server route.
+    async function fetchGeminiWithRetry(prompt, systemInstruction) {
+        const payload = { prompt, systemInstruction };
+        const delays = [1000, 2000, 4000, 8000, 16000];
+        for (let i = 0; i <= delays.length; i++) {
+            try {
+                const response = await fetch('/api/gemini', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const result = await response.json();
+                return result.text || "抱歉，由于未知原因未能生成内容。";
+            } catch (error) {
+                if (i === delays.length) {
+                    return "网络请求失败，已达到最大重试次数。请检查您的连接或稍后再试。";
+                }
+                await new Promise(r => setTimeout(r, delays[i]));
+            }
+        }
+    }
+
+    // Feature 1: Executive Summary Generator
+    const generateBtn = document.getElementById('generate-summary-btn');
+    const summaryContent = document.getElementById('summary-content');
+    const roleSelect = document.getElementById('role-select');
+
+    generateBtn.addEventListener('click', async () => {
+        const role = roleSelect.options[roleSelect.selectedIndex].text;
+        summaryContent.style.display = 'block';
+        summaryContent.innerHTML = `<div class="text-center text-[#FD349C] py-4"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span> 正在为 ${role} 分析数据并生成专属洞察...</div>`;
+        generateBtn.disabled = true;
+        generateBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+        const contextInfo = "核心背景：1. 全球BESS装机量飙升，大中华与美国领跑，东南亚增速反超。2. 长时储能（4小时以上）成为重点趋势。3. 竞争格局中垂直一体化厂商扩大优势。4. 核心挑战包括复杂的供应链波动、多国ESG合规与财务运作压力。5. 解决方案依托ERP+SCM+PLM数字底座。";
+        const prompt = `结合以下BESS行业背景信息，为"${role}"撰写一段约150字的定制化高管摘要。使用专业咨询顾问口吻，必须直接指出对其岗位最关键的挑战和机遇。\n\n${contextInfo}`;
+        const sysContext = "你是一位资深的全球能源与战略管理咨询合伙人。";
+
+        const aiResponse = await fetchGeminiWithRetry(prompt, sysContext);
+        const formattedHTML = aiResponse.replace(/\*\*(.*?)\*\*/g, '<strong class="text-[#00338D]">$1</strong>').replace(/\n/g, '<br>');
+        
+        summaryContent.innerHTML = `<div class="font-bold mb-2 text-[#ACEAFF]">针对 ${role} 的核心洞察：</div>${formattedHTML}`;
+        
+        generateBtn.disabled = false;
+        generateBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+    });
+
+    // Feature 2: Smart Chat Assistant
+    const chatWindow = document.getElementById('chat-window');
+    const openChatBtn = document.getElementById('open-chat-btn');
+    const closeChatBtn = document.getElementById('close-chat');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatInput = document.getElementById('chat-input');
+    const sendChatBtn = document.getElementById('send-chat-btn');
+
+    openChatBtn.addEventListener('click', () => {
+        chatWindow.style.display = 'flex';
+        openChatBtn.style.display = 'none';
+    });
+
+    closeChatBtn.addEventListener('click', () => {
+        chatWindow.style.display = 'none';
+        openChatBtn.style.display = 'flex';
+    });
+
+    function addChatMessage(text, sender) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `chat-message ${sender} shadow-sm`;
+        msgDiv.innerHTML = text;
+        chatMessages.appendChild(msgDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    async function handleSendMsg() {
+        const userText = chatInput.value.trim();
+        if (!userText) return;
+        
+        addChatMessage(userText, 'user');
+        chatInput.value = '';
+        
+        const loadingId = 'loading-' + Date.now();
+        addChatMessage(`<span id="${loadingId}"><span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span></span>`, 'ai');
+        
+        const sysContext = "你是一位专注于电池储能系统(BESS)及大型EPC项目交付的资深AI顾问。回答应专业、直击要点（控制在100-150字以内），擅长解释供应链、财务合规及ERP/数字化转型问题。如果问题偏离行业，请巧妙引导回相关话题。";
+        const aiResponse = await fetchGeminiWithRetry(userText, sysContext);
+        
+        const loadingElement = document.getElementById(loadingId);
+        if (loadingElement) loadingElement.parentElement.remove();
+        
+        const formattedResponse = aiResponse.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+        addChatMessage(formattedResponse, 'ai');
+    }
+
+    sendChatBtn.addEventListener('click', handleSendMsg);
+    chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleSendMsg();
+    });
+</script>
+</body>
+</html>
